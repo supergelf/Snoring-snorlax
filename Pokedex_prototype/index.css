@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'pkmn';
+    src: url('./font/pkmn.woff2') format('woff2'),
+         url('./font/pkmn.woff') format('woff'),
+         url('./font/pkmn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+  background-color: rgba(255,255,255,255);
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#title_screen {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 6%;
+  margin: 0;
+}
+
+article {
+    
+    font-size: 15px;
+    margin: auto;
+    max-width: 110ch;
+    background-color: rgb(255, 248, 239);
+    border-radius: 10px;
+    
+}
+
+
+.navbar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(238, 209, 164);
+
+    list-style-type: none;
+    border-radius: 6px;
+    font-family: 'pkmn';
+    font-size: 98%;
+    
+  }
+  
+.navbar > a {
+    float: left;
+    width: 16%;
+    display: block;
+    padding: 2% 2%;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(42, 62, 145);
+    
+    
+  }
+
+.navbar > a:hover {
+  background-color: rgb(126, 126, 239);
+  color: rgb(255, 242, 154);
+  }
+
+.navbar > .active {
+  background-color: rgb(94, 94, 196);
+  color: rgb(255, 242, 154);
+  }
+
+  
+#intro {
+    font-family: 'pkmn';
+    font-size: 80%;
+    margin-top: 0;
+}
+
+#intro > h1{
+  padding-left: 3%;
+}
+
+#intro > p {
+    padding: 3%;
+    padding-top: 1%;
+    line-height: 1.5em;
+}
+
+
+#github_link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight:bold;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  text-align: center;
+  font-family: 'pkmn';
+}
+
+thead {
+  background-color: rgb(126, 126, 239);
+  position: sticky; top: 0;
+}
+
+th:first-child {
+  border-top-left-radius: 5px;
+  
+}
+
+th:last-child{
+  border-top-right-radius: 5px;
+}
+
+th {
+  color: rgb(255, 242, 154);
+  font-size: 14px;
+  padding: 3%;
+}
+
+thead tr {
+  height: 65px;
+}
+
+tbody tr:nth-child(2n+1){
+  background-color: rgb(255, 250, 219);
+}
+
+tbody tr:nth-child(2n+2){
+  background-color: rgb(198, 207, 255);
+}
+
+tbody > tr > td {
+  height: 100px;
+  border: thin dotted rgb(126, 126, 239);
+  border-bottom: thin solid rgb(126, 126, 239);
+  
+}
+
+td:nth-child(4n+1){
+  background-color: rgb(255, 242, 154);
+  width: 10%;
+}
+
+tbody > tr:last-child > td {
+  border-bottom: 0;
+}
+
+tbody > tr:last-child > td:last-child{
+  border-bottom-right-radius: 15px;
+  border-right: 0;
+}
+
+tbody > tr:last-child > td:first-child{
+  border-bottom-left-radius: 15px;
+  border-left: 0;
+}
+
+
+.lastMod {
+  padding-left: 0;
+  text-align: center;
+}

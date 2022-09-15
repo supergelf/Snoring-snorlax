@@ -1,0 +1,85 @@
+{
+  "headers" : [
+    "Num",
+    "Name",
+    "Appearance",
+    "Type"
+  ],
+
+  "rows": [
+    [
+      "#001", 
+      "Bulbasaur", 
+      "d/df/Spr_2c_001.png",
+      ["grass", "poison"]
+    ],
+      
+    [
+      "#002",
+      "Ivysaur", 
+      "2/2a/Spr_2c_002.png",
+      ["grass", "poison"]
+    ],
+
+    [
+      "#003",
+      "Venasaur", 
+      "d/de/Spr_2c_003.png",
+      ["grass", "poison"]
+    ],
+    [
+      "#004",
+      "Charmander", 
+      "c/c6/Spr_2c_004.png",
+      "fire"
+    ],
+    [
+      "#005",
+      "Charmeleon", 
+      "5/52/Spr_2c_005.png",
+      "fire"
+    ],
+    [
+      "#006",
+      "Charizard", 
+      "1/1f/Spr_2c_006.png",
+      "fire"
+    ],
+    [
+      "#007",
+      "Squirtle", 
+      "6/6d/Spr_2c_007.png",
+      "water"
+    ],
+    [
+      "#008",
+      "Wartortle", 
+      "5/5d/Spr_2c_008.png",
+      "water"
+    ],
+    [
+      "#009",
+      "Blastoise", 
+      "f/f8/Spr_2c_009.png",
+      "water"
+    ],
+    [
+      "#010",
+      "Caterpie", 
+      "b/bd/Spr_2c_010.png",
+      "bug"
+    ],
+    [
+      "#011",
+      "Metapod", 
+      "1/1c/Spr_2c_011.png",
+      "bug"
+    ],
+    [
+      "#012",
+      "Butterfree", 
+      "c/c4/Spr_2c_012.png",
+      ["bug", "flying"]
+    ]
+  ]
+}

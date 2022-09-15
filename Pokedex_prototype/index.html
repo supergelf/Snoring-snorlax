@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots"  content="follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pokémon Pokédex with gifs by The Snoring Snorlax. Includes Pokémon Gen 2 sprites and sprites from several other Pokémon games.">
+    <meta name="keywords" content="Pokemon, pokedex, gifs, pokemon sprite, pokemon sprites, pokemon gifs, pokemon pokedex, pokémon, pokédex">
+    
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="https://archives.bulbagarden.net/media/upload/c/c9/Spr_2s_143.png" type="image/x-icon">
+    <title>Pokémon Pokédex | The Snoring Snorlax</title>
+</head>
+<body>
+    <header>
+        <img id="title_screen" src="./img/gold_screen_animated_cut3.gif" alt="pokemon gold title screen gif">
+    </header>
+    <article>
+        <div class="navbar">
+            <a class="active" href="./index.html">Dex</a>
+            <a href="./index.html">News</a>
+            <a href="./index.html">Gallery</a>
+            <a href="./index.html">About</a>
+            <a href="./index.html">Contact</a>
+        </div>
+        <div id="intro">
+            <h1>Pokémon Pokédex Gen II</h1>
+            <p>Hello all, and welcome to this little pokedex project of mine. I've just started out with programming in HTML, CSS and JavaScript, and thought this would be a nice little challenge for me. <br>
+            Here you will be able to go through and look at all of the 151 original pokemon, and hopefully be able to use the search bar. If you have any tips on how i can improve this site, please dont hesitate to contact me by email. You can also check out what im up to on <a href="https://github.com/supergelf", target="_blank" id="github_link">github.</a></p>
+        </div>
+    </article>
+    
+
+    <div>
+        <table>
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="lastMod">
+        <p>Last Modified:</p>
+        <p id="last_modified"></p>
+    </div>
+
+    <script type="text/javascript" src="./pokson/pokedex.json"></script>
+    <script type="text/javascript" src="./pokson/types.json"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
