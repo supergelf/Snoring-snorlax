@@ -24,6 +24,35 @@ body {
   margin: 0;
 }
 
+header {
+  background: url(./img/sky2.gif) repeat-x;
+  background-size: 250px;
+  height: 340px;
+}
+
+#snoring {
+  float: left;
+  height: 100px;
+  width: 100px;
+}
+
+header > div {
+  font-family: 'pkmn';
+  font-weight: 600;
+  font-size: 22px;
+  color: #3b3651;
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+header > div > p {
+  margin: 0;
+  padding: 3px;
+}
+
+
+
 article {
     
     font-size: 15px;

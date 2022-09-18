@@ -26,22 +26,33 @@ async function loadIntoTable(url, table){
             cellElement.textContent = cellText;
             rowElement.appendChild(cellElement);
 
-            if (cellText.includes('2c')){
+            if (cellText.length === 3){
                 const imgCell = document.createElement('td');
                 let imgPoke = document.createElement("img");
 
-                imgPoke.setAttribute("height", "80px")
-                imgPoke.setAttribute("width", "80px")
-                imgPoke.setAttribute("alt", row[1] + "pixel sprite animated gif")
-                imgPoke.setAttribute("src", "https://archives.bulbagarden.net/media/upload/" + row[2]);
-                imgCell.appendChild(imgPoke)
+                imgPoke.setAttribute("height", "80px");
+                imgPoke.setAttribute("width", "80px");
+                imgPoke.setAttribute("alt", row[1] + " sprite gif");
+                imgPoke.setAttribute("src", "./sprites/" + row[2] + ".png");
+                imgCell.appendChild(imgPoke);
                 rowElement.replaceChild(imgCell, cellElement);
             }
-// https://archives.bulbagarden.net/media/upload/d/dc/GrassIC_FRLG.png
-            if (cellText.includes()){
-                const typeCell = document.createElement('td');
-                let imgType = document.createElement("img");
-            }
+
+        const typeCell = document.createElement('td');
+            for (const type of cellText){
+                if (type.includes("type")){
+                    
+                    let imgType = document.createElement("img");
+
+                    imgType.setAttribute("height", "28px");
+                    imgType.setAttribute("width", "64px");
+                    imgType.setAttribute("alt", type + " png");
+                    imgType.setAttribute("src", "./types/" + type + ".png");
+                    typeCell.appendChild(imgType);
+                    
+                    cellElement.replaceWith(typeCell);  
+                }
+            }    
         }
 
         tableBody.appendChild(rowElement)
