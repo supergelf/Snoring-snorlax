@@ -8,112 +8,135 @@
 
 }
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('./font/Nunito/Nunito-VariableFont_wght.ttf') format('TrueType'),
+       url('./font/Nunito/Nunito-Italic-VariableFont_wght.ttf') format('TrueType');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
-  background-color: rgba(255,255,255,255);
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white;
 }
-
-
-
-#title_screen {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 6%;
-  margin: 0;
-}
-
 header {
-  background: url(./img/sky2.gif) repeat-x;
-  background-size: 250px;
-  height: 340px;
-}
-
+    background: url(./img/sky3.gif) repeat-x;
+    background-size: 250px;
+    position:static;
+    height: 240px;
+    display: grid;
+  }
+  
 #snoring {
-  float: left;
-  height: 100px;
-  width: 100px;
+    height: 100px;
+    width: 100px;
 }
-
+  
 header > div {
-  font-family: 'pkmn';
-  font-weight: 600;
-  font-size: 22px;
-  color: #3b3651;
-  float: left;
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 10%;
+}
+  
+header > div > div{
+    font-family: 'pkmn';
+    font-weight: 600;
+    font-size: 22px;
+    color: #3b3651;
+}
+  
+header  p {
+    margin: 0;
+    padding: 2px;
 }
 
-header > div > p {
-  margin: 0;
-  padding: 3px;
-}
-
-
-
-article {
-    
-    font-size: 15px;
+main {
+    background-color: #c3bcdf;
+    width: 95%;
     margin: auto;
-    max-width: 110ch;
-    background-color: rgb(255, 248, 239);
+    padding-top: 2%;
+    padding-bottom: 3%;
+    margin-top: 3%;
+    margin-bottom: 2%;
     border-radius: 10px;
-    
+    font-family: 'Nunito', sans-serif;
 }
+
 
 
 .navbar {
-    width: 100%;
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 95%;
+    margin: auto;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(238, 209, 164);
-
+    background-color: #3b3651;
     list-style-type: none;
     border-radius: 6px;
-    font-family: 'pkmn';
-    font-size: 98%;
+    font-size: 120%;
     
   }
   
 .navbar > a {
-    float: left;
-    width: 16%;
-    display: block;
-    padding: 2% 2%;
+    width: 18%;
+    padding: 2%;
     text-decoration: none;
     text-align: center;
-    color: rgb(42, 62, 145);
-    
-    
+    color:  rgb(255, 242, 154);
+    transition: 0.3s;
   }
 
 .navbar > a:hover {
-  background-color: rgb(126, 126, 239);
+  background-color: #9a90c5;
   color: rgb(255, 242, 154);
+  transition: 0.3s;
   }
 
 .navbar > .active {
-  background-color: rgb(94, 94, 196);
+  background-color: #6e6692;
   color: rgb(255, 242, 154);
   }
 
+#about {
+    display: grid;
+    font-size: 20px;
+    margin: auto;
+    max-width: 95%;
+    background-color: rgb(255, 248, 239);
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
   
 #intro {
-    font-family: 'pkmn';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
     font-size: 80%;
     margin-top: 0;
 }
 
 #intro > h1{
-  padding-left: 3%;
+    padding-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+  
 }
 
 #intro > p {
-    padding: 3%;
-    padding-top: 1%;
+    margin: 0;
+    padding: 2%;
+    padding-top: 0%;
     line-height: 1.5em;
 }
 
@@ -121,80 +144,80 @@ article {
 #github_link {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-weight:bold;
+    font-weight: bold;
+    font-size: 110%;
 }
 
 
 
-table {
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  width: 65%;
-  text-align: center;
-  font-family: 'pkmn';
+
+
+
+
+
+#pokemon_info {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-thead {
-  background-color: rgb(126, 126, 239);
-  position: sticky; top: 0;
+#pokemon_info > div {
+    display: grid;
+    flex-basis: 370px;
+    grid-template-columns: [first] 40% [line2] 60%;
+    grid-template-rows: [row1-start] 33% [row1-end] 33% [third-line] 33% [last-line];
+    
+    height: 160px;
+    background-color: rgb(255, 248, 239);
+    border: 2px solid #b2a9d4;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    transition: 0.3s;
 }
 
-th:first-child {
-  border-top-left-radius: 5px;
-  
+
+
+#pokemon_info > div > p {
+    padding: 0;
+    margin: 0;
 }
 
-th:last-child{
-  border-top-right-radius: 5px;
+#pokemon_info > div > p:first-child {
+    grid-row: 1;
+    grid-column: 1;
 }
 
-th {
-  color: rgb(255, 242, 154);
-  font-size: 14px;
-  padding: 3%;
+#pokemon_info > div > p:nth-child(2) {
+    grid-row: 3;
+    grid-column: 1;
 }
 
-thead tr {
-  height: 65px;
+#pokemon_info > div > p:nth-child(3) {
+    grid-row: 2;
+    grid-column: 1;
 }
 
-tbody tr:nth-child(2n+1){
-  background-color: rgb(255, 250, 219);
+#pokemon_info > div > p:nth-child(4) {
+    grid-row: 1 / span 3;
+    grid-column: 2;
+    padding: 0%;
+    margin: 5%;
+    font-size: 95%;
 }
 
-tbody tr:nth-child(2n+2){
-  background-color: rgb(198, 207, 255);
-}
 
-tbody > tr > td {
-  height: 100px;
-  border: thin dotted rgb(126, 126, 239);
-  border-bottom: thin solid rgb(126, 126, 239);
-  
-}
 
-td:nth-child(4n+1){
-  background-color: rgb(255, 242, 154);
-  width: 10%;
-}
 
-tbody > tr:last-child > td {
-  border-bottom: 0;
-}
 
-tbody > tr:last-child > td:last-child{
-  border-bottom-right-radius: 15px;
-  border-right: 0;
-}
-
-tbody > tr:last-child > td:first-child{
-  border-bottom-left-radius: 15px;
-  border-left: 0;
-}
 
 
 .lastMod {
-  padding-left: 0;
-  text-align: center;
+    display: grid;
+    justify-items: center;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 2%;
 }

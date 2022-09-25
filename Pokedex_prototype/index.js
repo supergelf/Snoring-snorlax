@@ -1,67 +1,66 @@
-async function loadIntoTable(url, table){
-    const tableHead = table.querySelector('thead');
-    const tableBody = table.querySelector('tbody');
+async function loadIntoSection(url, pokemon_info){
+    const section = pokemon_info.querySelector('section');
     const response = await fetch(url);
-    const { headers, rows } = await response.json();
+    const  divs  = await response.json();
     
-    // Clear the table
-    tableHead.innerHTML = '<tr></tr>';
-    tableBody.innerHTML = '';
+    /*
+    const div_step1 = divs.find(element => element[0]);
+    const div_step2 = div_step1.find(element => element[3]);
+    */
 
-    //Populate the headers
-    for (const headerText of headers){
-        const headerElement = document.createElement('th');
+    for (const div of divs){
+        const divElement = document.createElement('div');
 
-        headerElement.textContent = headerText;
-        tableHead.querySelector('tr').appendChild(headerElement)
-    }
 
-    //Populate the rows
-    for (const row of rows) {
-        const rowElement = document.createElement('tr');
-
-        for (const cellText of row) {
-            const cellElement = document.createElement('td');
-
+        for (const cellText of div){
+            const cellElement = document.createElement('p');
+            
             cellElement.textContent = cellText;
-            rowElement.appendChild(cellElement);
-
+            divElement.appendChild(cellElement);
+            
             if (cellText.length === 3){
-                const imgCell = document.createElement('td');
+                const imgCell = document.createElement('p');
                 let imgPoke = document.createElement("img");
 
-                imgPoke.setAttribute("height", "80px");
-                imgPoke.setAttribute("width", "80px");
-                imgPoke.setAttribute("alt", row[1] + " sprite gif");
-                imgPoke.setAttribute("src", "./sprites/" + row[2] + ".png");
+                imgPoke.setAttribute("height", "70px");
+                imgPoke.setAttribute("width", "70px");
+                imgPoke.setAttribute("alt", div[1] + " sprite gif");
+                imgPoke.setAttribute("src", "./sprites/" + div[2] + ".png");
                 imgCell.appendChild(imgPoke);
-                rowElement.replaceChild(imgCell, cellElement);
+                divElement.replaceChild(imgCell, cellElement);
             }
 
-        const typeCell = document.createElement('td');
             for (const type of cellText){
                 if (type.includes("type")){
-                    
-                    let imgType = document.createElement("img");
-
-                    imgType.setAttribute("height", "28px");
-                    imgType.setAttribute("width", "64px");
-                    imgType.setAttribute("alt", type + " png");
-                    imgType.setAttribute("src", "./types/" + type + ".png");
-                    typeCell.appendChild(imgType);
-                    
-                    cellElement.replaceWith(typeCell);  
+                    cellElement.remove(type);
                 }
-            }    
-        }
+                
+            }
+            
 
-        tableBody.appendChild(rowElement)
+            
+        }
+        
+        document.getElementById('pokemon_info').appendChild(divElement)
+        
+       
+
+    
     }
-    console.log(tableHead, tableBody)
+
 }
 
 
-loadIntoTable('./pokson/pokedex.json', document.querySelector('table'));
+loadIntoSection('./pokson/gen1.json', document.querySelector('#pokemon_info'));
+
+let cry = new Audio();
+
+function playAudio(file){
+    cry.pause();
+    cry = new Audio(file);
+    cry.play();
+}
+
 
 function lastMod() {
     let l = document.lastModified;
